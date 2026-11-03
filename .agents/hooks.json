@@ -1,0 +1,17 @@
+{
+  "repo-audit-reminder": {
+    "enabled": false,
+    "PostToolUse": [
+      {
+        "matcher": "edit_file|write_file",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 .agents/skills/quality-check/scripts/audit_repo.py",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
